@@ -25,7 +25,6 @@
 package net.mcparkour.moonglow.repository.handler;
 
 import java.util.Spliterator;
-import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
@@ -51,7 +50,6 @@ public class GetMethodHandler implements MethodHandler {
 		FindIterable<BsonDocument> found = this.collection.find();
 		Spliterator<BsonDocument> spliterator = found.spliterator();
 		return StreamSupport.stream(spliterator, false)
-			.map(document -> this.converter.fromDocument(document, this.documentType))
-			.collect(Collectors.toUnmodifiableList());
+			.map(document -> this.converter.fromDocument(document, this.documentType));
 	}
 }

@@ -24,7 +24,7 @@
 
 package net.mcparkour.moonglow.repository;
 
-import java.util.List;
+import java.util.stream.Stream;
 
 public interface BaseRepository<T> {
 
@@ -34,7 +34,7 @@ public interface BaseRepository<T> {
 
 	void delete(T data);
 
-	List<T> get();
+	Stream<T> get();
 
 	long count();
 
