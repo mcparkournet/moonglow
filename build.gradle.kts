@@ -11,6 +11,10 @@ repositories {
 }
 
 dependencies {
+	implementation("org.mongodb:mongodb-driver-sync:4.0.1")
+	implementation("net.mcparkour:common-reflection:1.0.5")
+	implementation("net.mcparkour:common-tuple:1.0.5")
+	implementation("net.mcparkour:unifig-snakeyaml:1.1.10")
 	compileOnly("org.jetbrains:annotations:19.0.0")
 	testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.1")
 	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.6.1")
